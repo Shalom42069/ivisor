@@ -1,0 +1,89 @@
+﻿2026-09-24T13:00:39.9155551Z ##[group]Run actions/checkout@v4
+2026-09-24T13:00:39.9155995Z with:
+2026-09-24T13:00:39.9156150Z   repository: Shalom42069/ivisor
+2026-09-24T13:00:39.9157627Z   token: ***
+2026-09-24T13:00:39.9157776Z   ssh-strict: true
+2026-09-24T13:00:39.9157922Z   ssh-user: git
+2026-09-24T13:00:39.9158071Z   persist-credentials: true
+2026-09-24T13:00:39.9158241Z   clean: true
+2026-09-24T13:00:39.9158396Z   sparse-checkout-cone-mode: true
+2026-09-24T13:00:39.9158570Z   fetch-depth: 1
+2026-09-24T13:00:39.9158724Z   fetch-tags: false
+2026-09-24T13:00:39.9158872Z   show-progress: true
+2026-09-24T13:00:39.9159019Z   lfs: false
+2026-09-24T13:00:39.9159157Z   submodules: false
+2026-09-24T13:00:39.9159303Z   set-safe-directory: true
+2026-09-24T13:00:39.9159473Z   allow-unsafe-pr-checkout: false
+2026-09-24T13:00:39.9159730Z ##[endgroup]
+2026-09-24T13:00:39.9802066Z Syncing repository: Shalom42069/ivisor
+2026-09-24T13:00:39.9803287Z ##[group]Getting Git version info
+2026-09-24T13:00:39.9803654Z Working directory is '/home/runner/work/ivisor/ivisor'
+2026-09-24T13:00:39.9804229Z [command]/usr/bin/git version
+2026-09-24T13:00:39.9841976Z git version 2.55.0
+2026-09-24T13:00:39.9854380Z ##[endgroup]
+2026-09-24T13:00:39.9870700Z Temporarily overriding HOME='/home/runner/work/_temp/0c89ff3f-c571-43c2-ad85-be1347ea4238' before making global git config changes
+2026-09-24T13:00:39.9876634Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-24T13:00:39.9877554Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ivisor/ivisor
+2026-09-24T13:00:39.9919323Z Deleting the contents of '/home/runner/work/ivisor/ivisor'
+2026-09-24T13:00:39.9925731Z ##[group]Initializing the repository
+2026-09-24T13:00:39.9926913Z [command]/usr/bin/git init /home/runner/work/ivisor/ivisor
+2026-09-24T13:00:40.0004700Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-24T13:00:40.0005628Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-24T13:00:40.0006268Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-24T13:00:40.0006966Z hint: call:
+2026-09-24T13:00:40.0007196Z hint:
+2026-09-24T13:00:40.0007496Z hint: 	git config --global init.defaultBranch <name>
+2026-09-24T13:00:40.0007804Z hint:
+2026-09-24T13:00:40.0008134Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-24T13:00:40.0008607Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-24T13:00:40.0008961Z hint:
+2026-09-24T13:00:40.0009172Z hint: 	git branch -m <name>
+2026-09-24T13:00:40.0009408Z hint:
+2026-09-24T13:00:40.0009711Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-24T13:00:40.0010205Z Initialized empty Git repository in /home/runner/work/ivisor/ivisor/.git/
+2026-09-24T13:00:40.0018509Z [command]/usr/bin/git remote add origin https://github.com/Shalom42069/ivisor
+2026-09-24T13:00:40.0059460Z ##[endgroup]
+2026-09-24T13:00:40.0130386Z ##[group]Disabling automatic garbage collection
+2026-09-24T13:00:40.0130927Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-24T13:00:40.0134997Z ##[endgroup]
+2026-09-24T13:00:40.0135402Z ##[group]Setting up auth
+2026-09-24T13:00:40.0135788Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-24T13:00:40.0146936Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-24T13:00:40.0434429Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-24T13:00:40.0464004Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-24T13:00:40.0635551Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-24T13:00:40.0663918Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-24T13:00:40.0838769Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-24T13:00:40.0872439Z ##[endgroup]
+2026-09-24T13:00:40.0872753Z ##[group]Fetching the repository
+2026-09-24T13:00:40.0878330Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7c05b4e5045848d747f55168982a6a50ede89bc3:refs/tags/Z
+2026-09-24T13:00:40.7242048Z From https://github.com/Shalom42069/ivisor
+2026-09-24T13:00:40.7242438Z  * [new ref]         7c05b4e5045848d747f55168982a6a50ede89bc3 -> Z
+2026-09-24T13:00:40.7246252Z ##[endgroup]
+2026-09-24T13:00:40.7246509Z ##[group]Determining the checkout info
+2026-09-24T13:00:40.7248030Z ##[endgroup]
+2026-09-24T13:00:40.7252436Z [command]/usr/bin/git sparse-checkout disable
+2026-09-24T13:00:40.7296128Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-24T13:00:40.7322816Z ##[group]Checking out the ref
+2026-09-24T13:00:40.7325627Z [command]/usr/bin/git checkout --progress --force refs/tags/Z
+2026-09-24T13:00:40.7367934Z Note: switching to 'refs/tags/Z'.
+2026-09-24T13:00:40.7368132Z 
+2026-09-24T13:00:40.7368331Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-24T13:00:40.7368755Z changes and commit them, and you can discard any commits you make in this
+2026-09-24T13:00:40.7369235Z state without impacting any branches by switching back to a branch.
+2026-09-24T13:00:40.7369472Z 
+2026-09-24T13:00:40.7369646Z If you want to create a new branch to retain commits you create, you may
+2026-09-24T13:00:40.7370037Z do so (now or later) by using -c with the switch command. Example:
+2026-09-24T13:00:40.7370453Z 
+2026-09-24T13:00:40.7370557Z   git switch -c <new-branch-name>
+2026-09-24T13:00:40.7370703Z 
+2026-09-24T13:00:40.7370803Z Or undo this operation with:
+2026-09-24T13:00:40.7370897Z 
+2026-09-24T13:00:40.7370953Z   git switch -
+2026-09-24T13:00:40.7371038Z 
+2026-09-24T13:00:40.7371172Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-24T13:00:40.7371339Z 
+2026-09-24T13:00:40.7371427Z HEAD is now at 7c05b4e Add files via upload
+2026-09-24T13:00:40.7375332Z ##[endgroup]
+2026-09-24T13:00:40.7407953Z [command]/usr/bin/git log -1 --format=%H
+2026-09-24T13:00:40.7429037Z 7c05b4e5045848d747f55168982a6a50ede89bc3

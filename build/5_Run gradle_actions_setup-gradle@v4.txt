@@ -1,0 +1,31 @@
+﻿2026-09-24T13:00:40.9458764Z ##[group]Run gradle/actions/setup-gradle@v4
+2026-09-24T13:00:40.9459009Z with:
+2026-09-24T13:00:40.9459127Z   cache-disabled: true
+2026-09-24T13:00:40.9459255Z   cache-read-only: true
+2026-09-24T13:00:40.9459386Z   cache-write-only: false
+2026-09-24T13:00:40.9459529Z   cache-overwrite-existing: false
+2026-09-24T13:00:40.9459679Z   cache-cleanup: on-success
+2026-09-24T13:00:40.9459844Z   gradle-home-cache-includes: caches
+notifications
+
+2026-09-24T13:00:40.9460031Z   add-job-summary: always
+2026-09-24T13:00:40.9460179Z   add-job-summary-as-pr-comment: never
+2026-09-24T13:00:40.9460340Z   dependency-graph: disabled
+2026-09-24T13:00:40.9460515Z   dependency-graph-report-dir: dependency-graph-reports
+2026-09-24T13:00:40.9460737Z   dependency-graph-continue-on-failure: true
+2026-09-24T13:00:40.9460906Z   build-scan-publish: false
+2026-09-24T13:00:40.9461047Z   validate-wrappers: true
+2026-09-24T13:00:40.9461185Z   allow-snapshot-wrappers: false
+2026-09-24T13:00:40.9461340Z   gradle-home-cache-strict-match: false
+2026-09-24T13:00:40.9461537Z   workflow-job-context: null
+2026-09-24T13:00:40.9462996Z   github-token: ***
+2026-09-24T13:00:40.9463117Z env:
+2026-09-24T13:00:40.9463287Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:40.9463782Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:40.9464067Z ##[endgroup]
+2026-09-24T13:00:42.0525467Z Cache is disabled: will not restore state from previous builds.
+2026-09-24T13:00:42.0537764Z Merged default JDK locations into /home/runner/.m2/toolchains.xml
+2026-09-24T13:00:42.0588058Z ##[group]All Gradle Wrapper jars are valid
+2026-09-24T13:00:42.0589001Z ✓ Found known Gradle Wrapper JAR files:
+2026-09-24T13:00:42.0589456Z   7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172 src/ivisor/gradle/wrapper/gradle-wrapper.jar
+2026-09-24T13:00:42.0609005Z ##[endgroup]

@@ -1,0 +1,33 @@
+﻿2026-09-24T13:03:04.6965717Z ##[group]Run actions/upload-artifact@v4
+2026-09-24T13:03:04.6966053Z with:
+2026-09-24T13:03:04.6966180Z   name: IVisor-apk
+2026-09-24T13:03:04.6966329Z   path: src/ivisor/app/build/outputs/apk/release/*.apk
+2026-09-24T13:03:04.6966505Z   if-no-files-found: warn
+2026-09-24T13:03:04.6966632Z   compression-level: 6
+2026-09-24T13:03:04.6966749Z   overwrite: false
+2026-09-24T13:03:04.6966866Z   include-hidden-files: false
+2026-09-24T13:03:04.6967005Z env:
+2026-09-24T13:03:04.6967167Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:03:04.6967424Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:03:04.6967646Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-09-24T13:03:04.6967808Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-09-24T13:03:04.6967966Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-09-24T13:03:04.6968121Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-09-24T13:03:04.6968351Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-09-24T13:03:04.6968621Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-09-24T13:03:04.6968794Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-09-24T13:03:04.6968935Z ##[endgroup]
+2026-09-24T13:03:04.8153850Z (node:2409) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-24T13:03:04.8154625Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-24T13:03:04.8192872Z With the provided path, there will be 1 file uploaded
+2026-09-24T13:03:04.8217042Z Artifact name is valid!
+2026-09-24T13:03:04.8217354Z Root directory input is valid!
+2026-09-24T13:03:05.1495838Z Beginning upload of artifact content to blob storage
+2026-09-24T13:03:05.4845649Z (node:2409) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-24T13:03:06.2606960Z Uploaded bytes 7700925
+2026-09-24T13:03:06.3233618Z Finished uploading artifact content to blob storage!
+2026-09-24T13:03:06.3234211Z SHA256 digest of uploaded artifact zip is 93addf0ce098263bf40c52363daf25fffe97694f24baf3578c6605c6cb513bed
+2026-09-24T13:03:06.3236060Z Finalizing artifact upload
+2026-09-24T13:03:06.6044844Z Artifact IVisor-apk.zip successfully finalized. Artifact ID 10809275731
+2026-09-24T13:03:06.6045386Z Artifact IVisor-apk has been successfully uploaded! Final size is 7700925 bytes. Artifact ID is 10809275731
+2026-09-24T13:03:06.6050105Z Artifact download URL: https://github.com/Shalom42069/ivisor/actions/runs/36002749108/artifacts/10809275731

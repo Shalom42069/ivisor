@@ -1,0 +1,100 @@
+﻿2026-09-24T13:00:42.0698309Z ##[group]Run cd src/ivisor && chmod +x gradlew && ./gradlew --no-daemon assembleRelease
+2026-09-24T13:00:42.0698665Z [36;1mcd src/ivisor && chmod +x gradlew && ./gradlew --no-daemon assembleRelease[0m
+2026-09-24T13:00:42.0750985Z shell: /usr/bin/bash -e {0}
+2026-09-24T13:00:42.0751131Z env:
+2026-09-24T13:00:42.0751310Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:42.0751580Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:42.0751810Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-09-24T13:00:42.0751998Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-09-24T13:00:42.0752165Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-09-24T13:00:42.0752353Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-09-24T13:00:42.0752720Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-09-24T13:00:42.0752992Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-09-24T13:00:42.0753176Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-09-24T13:00:42.0753358Z ##[endgroup]
+2026-09-24T13:00:42.4178513Z Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+2026-09-24T13:00:44.3418914Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2026-09-24T13:00:45.4157799Z 
+2026-09-24T13:00:45.4159031Z Welcome to Gradle 8.14.3!
+2026-09-24T13:00:45.4159418Z 
+2026-09-24T13:00:45.4159814Z Here are the highlights of this release:
+2026-09-24T13:00:45.4160319Z  - Java 24 support
+2026-09-24T13:00:45.4165371Z  - GraalVM Native Image toolchain selection
+2026-09-24T13:00:45.4168932Z  - Enhancements to test reporting
+2026-09-24T13:00:45.4169554Z  - Build Authoring improvements
+2026-09-24T13:00:45.4196499Z 
+2026-09-24T13:00:45.4207246Z For more details see https://docs.gradle.org/8.14.3/release-notes.html
+2026-09-24T13:00:45.4207706Z 
+2026-09-24T13:00:45.4208642Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2026-09-24T13:00:46.4148259Z Daemon will be stopped at the end of the build 
+2026-09-24T13:01:26.0134277Z > Task :app:preBuild UP-TO-DATE
+2026-09-24T13:01:26.0138064Z > Task :app:preReleaseBuild UP-TO-DATE
+2026-09-24T13:01:26.1120739Z > Task :app:mergeReleaseJniLibFolders
+2026-09-24T13:01:35.8145037Z > Task :app:buildKotlinToolingMetadata
+2026-09-24T13:01:36.3124344Z > Task :app:mergeReleaseNativeLibs
+2026-09-24T13:01:36.8157217Z > Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-09-24T13:01:36.9120904Z > Task :app:checkReleaseDuplicateClasses
+2026-09-24T13:01:36.9146970Z > Task :app:generateReleaseResValues
+2026-09-24T13:01:36.9176613Z > Task :app:checkReleaseAarMetadata
+2026-09-24T13:01:37.0126514Z 
+2026-09-24T13:01:37.0147070Z > Task :app:stripReleaseDebugSymbols
+2026-09-24T13:01:37.0147846Z Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libmlkit_google_ocr_pipeline.so.
+2026-09-24T13:01:37.0148339Z 
+2026-09-24T13:01:37.0148570Z > Task :app:mapReleaseSourceSetPaths
+2026-09-24T13:01:37.0148876Z > Task :app:generateReleaseResources
+2026-09-24T13:01:37.0149144Z > Task :app:extractReleaseNativeSymbolTables
+2026-09-24T13:01:38.3130674Z > Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+2026-09-24T13:01:38.3156701Z > Task :app:packageReleaseResources
+2026-09-24T13:01:38.6120349Z > Task :app:mergeReleaseResources
+2026-09-24T13:01:39.5129048Z > Task :app:createReleaseCompatibleScreenManifests
+2026-09-24T13:01:39.5144436Z > Task :app:extractDeepLinksRelease
+2026-09-24T13:01:39.6126898Z > Task :app:parseReleaseLocalResources
+2026-09-24T13:01:39.8128710Z > Task :app:processReleaseMainManifest
+2026-09-24T13:01:39.8129346Z > Task :app:processReleaseManifest
+2026-09-24T13:01:39.9120113Z > Task :app:javaPreCompileRelease
+2026-09-24T13:01:39.9139832Z > Task :app:processReleaseManifestForPackage
+2026-09-24T13:01:40.1123465Z > Task :app:mergeReleaseArtProfile
+2026-09-24T13:01:40.1130555Z > Task :app:extractProguardFiles
+2026-09-24T13:01:40.1131124Z > Task :app:mergeReleaseStartupProfile
+2026-09-24T13:01:40.1131593Z > Task :app:mergeReleaseShaders
+2026-09-24T13:01:40.1132059Z > Task :app:compileReleaseShaders NO-SOURCE
+2026-09-24T13:01:40.1132447Z > Task :app:generateReleaseAssets UP-TO-DATE
+2026-09-24T13:01:40.2137165Z > Task :app:mergeReleaseAssets
+2026-09-24T13:01:40.3157163Z > Task :app:extractReleaseVersionControlInfo
+2026-09-24T13:01:40.3176517Z > Task :app:compressReleaseAssets
+2026-09-24T13:01:40.4132358Z > Task :app:collectReleaseDependencies
+2026-09-24T13:01:40.5127417Z > Task :app:processReleaseResources
+2026-09-24T13:01:40.5156631Z > Task :app:sdkReleaseDependencyData
+2026-09-24T13:01:46.9122929Z > Task :app:validateSigningRelease
+2026-09-24T13:01:46.9156955Z > Task :app:writeReleaseAppMetadata
+2026-09-24T13:01:47.0122753Z > Task :app:writeReleaseSigningConfigVersions
+2026-09-24T13:01:47.0176828Z > Task :app:convertLinkedResourcesToProtoRelease
+2026-09-24T13:02:02.0121151Z 
+2026-09-24T13:02:02.0122042Z > Task :app:compileReleaseKotlin
+2026-09-24T13:02:02.0123164Z w: file:///home/runner/work/ivisor/ivisor/src/ivisor/app/src/main/java/de/marlon/ivisor/scan/OverlayService.kt:194:56 'static field SOFT_INPUT_ADJUST_RESIZE: Int' is deprecated. Deprecated in Java.
+2026-09-24T13:02:02.1120541Z 
+2026-09-24T13:02:02.1121468Z > Task :app:compileReleaseJavaWithJavac NO-SOURCE
+2026-09-24T13:02:02.4137039Z > Task :app:mergeReleaseGeneratedProguardFiles
+2026-09-24T13:02:02.4144012Z > Task :app:processReleaseJavaRes
+2026-09-24T13:02:03.0123600Z > Task :app:expandReleaseArtProfileWildcards
+2026-09-24T13:02:04.0120923Z > Task :app:mergeReleaseJavaResource
+2026-09-24T13:02:34.0150864Z > Task :app:minifyReleaseWithR8
+2026-09-24T13:03:03.2121345Z > Task :app:compileReleaseArtProfile
+2026-09-24T13:03:04.0119924Z > Task :app:shrinkReleaseRes
+2026-09-24T13:03:04.0146444Z > Task :app:convertShrunkResourcesToBinaryRelease
+2026-09-24T13:03:04.1134753Z > Task :app:optimizeReleaseResources
+2026-09-24T13:03:04.3131081Z > Task :app:packageRelease
+2026-09-24T13:03:04.3132509Z > Task :app:createReleaseApkListingFileRedirect
+2026-09-24T13:03:04.3142200Z > Task :app:assembleRelease
+2026-09-24T13:03:04.3149526Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/apk-1790254849142.json
+2026-09-24T13:03:04.3167438Z 
+2026-09-24T13:03:04.3173009Z [Incubating] Problems report is available at: file:///home/runner/work/ivisor/ivisor/src/ivisor/build/reports/problems/problems-report.html
+2026-09-24T13:03:04.3173504Z 
+2026-09-24T13:03:04.3184911Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-09-24T13:03:04.3186553Z 
+2026-09-24T13:03:04.3216570Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-09-24T13:03:04.3217224Z 
+2026-09-24T13:03:04.3221022Z For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-09-24T13:03:04.3244842Z 
+2026-09-24T13:03:04.3245235Z BUILD SUCCESSFUL in 2m 22s
+2026-09-24T13:03:04.3247502Z 45 actionable tasks: 45 executed

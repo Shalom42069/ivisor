@@ -1,0 +1,450 @@
+﻿2026-09-24T13:00:36.5623188Z Current runner version: '2.337.0'
+2026-09-24T13:00:36.5641612Z ##[group]Runner Image Provisioner
+2026-09-24T13:00:36.5642144Z Hosted Compute Agent
+2026-09-24T13:00:36.5642568Z Version: 20260828.587
+2026-09-24T13:00:36.5642986Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-24T13:00:36.5643448Z Build Date: 2026-08-28T16:44:25Z
+2026-09-24T13:00:36.5643920Z Worker ID: {fa98cbe4-1ef3-4fd4-8b0d-cf7b5122b30f}
+2026-09-24T13:00:36.5644408Z Azure Region: westus3
+2026-09-24T13:00:36.5644801Z ##[endgroup]
+2026-09-24T13:00:36.5645701Z ##[group]Operating System
+2026-09-24T13:00:36.5646231Z Ubuntu
+2026-09-24T13:00:36.5646575Z 24.04.5
+2026-09-24T13:00:36.5646888Z LTS
+2026-09-24T13:00:36.5647239Z ##[endgroup]
+2026-09-24T13:00:36.5647602Z ##[group]Runner Image
+2026-09-24T13:00:36.5647948Z Image: ubuntu-24.04
+2026-09-24T13:00:36.5648339Z Version: 20260920.314.1
+2026-09-24T13:00:36.5649087Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-24T13:00:36.5650037Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+2026-09-24T13:00:36.5650854Z ##[endgroup]
+2026-09-24T13:00:36.5651572Z ##[group]GITHUB_TOKEN Permissions
+2026-09-24T13:00:36.5652973Z Contents: write
+2026-09-24T13:00:36.5653370Z Metadata: read
+2026-09-24T13:00:36.5653705Z ##[endgroup]
+2026-09-24T13:00:36.5655092Z Secret source: Actions
+2026-09-24T13:00:36.5655824Z Cache mode: write
+2026-09-24T13:00:36.5656662Z Prepare workflow directory
+2026-09-24T13:00:36.5862170Z Prepare all required actions
+2026-09-24T13:00:36.5894225Z Getting action download info
+2026-09-24T13:00:37.0592800Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-24T13:00:37.1317126Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+2026-09-24T13:00:37.9897535Z Download action repository 'gradle/actions@v4' (SHA:ed408507eac070d1f99cc633dbcf757c94c7933a)
+2026-09-24T13:00:39.6935131Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-09-24T13:00:39.8734031Z Complete job name: build
+2026-09-24T13:00:39.9155576Z ##[group]Run actions/checkout@v4
+2026-09-24T13:00:39.9155999Z with:
+2026-09-24T13:00:39.9156153Z   repository: Shalom42069/ivisor
+2026-09-24T13:00:39.9157630Z   token: ***
+2026-09-24T13:00:39.9157778Z   ssh-strict: true
+2026-09-24T13:00:39.9157924Z   ssh-user: git
+2026-09-24T13:00:39.9158073Z   persist-credentials: true
+2026-09-24T13:00:39.9158243Z   clean: true
+2026-09-24T13:00:39.9158398Z   sparse-checkout-cone-mode: true
+2026-09-24T13:00:39.9158576Z   fetch-depth: 1
+2026-09-24T13:00:39.9158726Z   fetch-tags: false
+2026-09-24T13:00:39.9158874Z   show-progress: true
+2026-09-24T13:00:39.9159020Z   lfs: false
+2026-09-24T13:00:39.9159159Z   submodules: false
+2026-09-24T13:00:39.9159305Z   set-safe-directory: true
+2026-09-24T13:00:39.9159478Z   allow-unsafe-pr-checkout: false
+2026-09-24T13:00:39.9159732Z ##[endgroup]
+2026-09-24T13:00:39.9802134Z Syncing repository: Shalom42069/ivisor
+2026-09-24T13:00:39.9803295Z ##[group]Getting Git version info
+2026-09-24T13:00:39.9803719Z Working directory is '/home/runner/work/ivisor/ivisor'
+2026-09-24T13:00:39.9804233Z [command]/usr/bin/git version
+2026-09-24T13:00:39.9841992Z git version 2.55.0
+2026-09-24T13:00:39.9854400Z ##[endgroup]
+2026-09-24T13:00:39.9870729Z Temporarily overriding HOME='/home/runner/work/_temp/0c89ff3f-c571-43c2-ad85-be1347ea4238' before making global git config changes
+2026-09-24T13:00:39.9876654Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-24T13:00:39.9877558Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ivisor/ivisor
+2026-09-24T13:00:39.9919345Z Deleting the contents of '/home/runner/work/ivisor/ivisor'
+2026-09-24T13:00:39.9925746Z ##[group]Initializing the repository
+2026-09-24T13:00:39.9926917Z [command]/usr/bin/git init /home/runner/work/ivisor/ivisor
+2026-09-24T13:00:40.0004725Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-24T13:00:40.0005650Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-24T13:00:40.0006271Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-24T13:00:40.0006969Z hint: call:
+2026-09-24T13:00:40.0007198Z hint:
+2026-09-24T13:00:40.0007499Z hint: 	git config --global init.defaultBranch <name>
+2026-09-24T13:00:40.0007806Z hint:
+2026-09-24T13:00:40.0008139Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-24T13:00:40.0008610Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-24T13:00:40.0008963Z hint:
+2026-09-24T13:00:40.0009175Z hint: 	git branch -m <name>
+2026-09-24T13:00:40.0009410Z hint:
+2026-09-24T13:00:40.0009714Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-24T13:00:40.0010208Z Initialized empty Git repository in /home/runner/work/ivisor/ivisor/.git/
+2026-09-24T13:00:40.0018526Z [command]/usr/bin/git remote add origin https://github.com/Shalom42069/ivisor
+2026-09-24T13:00:40.0059473Z ##[endgroup]
+2026-09-24T13:00:40.0130444Z ##[group]Disabling automatic garbage collection
+2026-09-24T13:00:40.0130930Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-24T13:00:40.0135017Z ##[endgroup]
+2026-09-24T13:00:40.0135405Z ##[group]Setting up auth
+2026-09-24T13:00:40.0135792Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-24T13:00:40.0146954Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-24T13:00:40.0434520Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-24T13:00:40.0464033Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-24T13:00:40.0636001Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-24T13:00:40.0663935Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-24T13:00:40.0838789Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-24T13:00:40.0872456Z ##[endgroup]
+2026-09-24T13:00:40.0872756Z ##[group]Fetching the repository
+2026-09-24T13:00:40.0878333Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7c05b4e5045848d747f55168982a6a50ede89bc3:refs/tags/Z
+2026-09-24T13:00:40.7242101Z From https://github.com/Shalom42069/ivisor
+2026-09-24T13:00:40.7242443Z  * [new ref]         7c05b4e5045848d747f55168982a6a50ede89bc3 -> Z
+2026-09-24T13:00:40.7246257Z ##[endgroup]
+2026-09-24T13:00:40.7246512Z ##[group]Determining the checkout info
+2026-09-24T13:00:40.7248033Z ##[endgroup]
+2026-09-24T13:00:40.7252440Z [command]/usr/bin/git sparse-checkout disable
+2026-09-24T13:00:40.7296172Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-24T13:00:40.7322834Z ##[group]Checking out the ref
+2026-09-24T13:00:40.7325631Z [command]/usr/bin/git checkout --progress --force refs/tags/Z
+2026-09-24T13:00:40.7367953Z Note: switching to 'refs/tags/Z'.
+2026-09-24T13:00:40.7368137Z 
+2026-09-24T13:00:40.7368335Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-24T13:00:40.7368758Z changes and commit them, and you can discard any commits you make in this
+2026-09-24T13:00:40.7369237Z state without impacting any branches by switching back to a branch.
+2026-09-24T13:00:40.7369475Z 
+2026-09-24T13:00:40.7369648Z If you want to create a new branch to retain commits you create, you may
+2026-09-24T13:00:40.7370040Z do so (now or later) by using -c with the switch command. Example:
+2026-09-24T13:00:40.7370456Z 
+2026-09-24T13:00:40.7370560Z   git switch -c <new-branch-name>
+2026-09-24T13:00:40.7370705Z 
+2026-09-24T13:00:40.7370810Z Or undo this operation with:
+2026-09-24T13:00:40.7370899Z 
+2026-09-24T13:00:40.7370956Z   git switch -
+2026-09-24T13:00:40.7371040Z 
+2026-09-24T13:00:40.7371174Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-24T13:00:40.7371340Z 
+2026-09-24T13:00:40.7371429Z HEAD is now at 7c05b4e Add files via upload
+2026-09-24T13:00:40.7375335Z ##[endgroup]
+2026-09-24T13:00:40.7407970Z [command]/usr/bin/git log -1 --format=%H
+2026-09-24T13:00:40.7429057Z 7c05b4e5045848d747f55168982a6a50ede89bc3
+2026-09-24T13:00:40.7588810Z ##[group]Run unzip -o ivisor.zip -d src
+2026-09-24T13:00:40.7589040Z [36;1munzip -o ivisor.zip -d src[0m
+2026-09-24T13:00:40.7803490Z shell: /usr/bin/bash -e {0}
+2026-09-24T13:00:40.7803658Z ##[endgroup]
+2026-09-24T13:00:40.7890727Z Archive:  ivisor.zip
+2026-09-24T13:00:40.7891245Z    creating: src/ivisor/
+2026-09-24T13:00:40.7891937Z   inflating: src/ivisor/build.gradle.kts  
+2026-09-24T13:00:40.7892446Z   inflating: src/ivisor/settings.gradle.kts  
+2026-09-24T13:00:40.7893663Z   inflating: src/ivisor/gradlew      
+2026-09-24T13:00:40.7893907Z    creating: src/ivisor/.github/
+2026-09-24T13:00:40.7894219Z    creating: src/ivisor/.github/workflows/
+2026-09-24T13:00:40.7894784Z   inflating: src/ivisor/.github/workflows/build.yml  
+2026-09-24T13:00:40.7895059Z    creating: src/ivisor/app/
+2026-09-24T13:00:40.7895669Z   inflating: src/ivisor/app/build.gradle.kts  
+2026-09-24T13:00:40.7896043Z    creating: src/ivisor/app/src/
+2026-09-24T13:00:40.7896471Z    creating: src/ivisor/app/src/main/
+2026-09-24T13:00:40.7896804Z    creating: src/ivisor/app/src/main/java/
+2026-09-24T13:00:40.7897200Z    creating: src/ivisor/app/src/main/java/de/
+2026-09-24T13:00:40.7897624Z    creating: src/ivisor/app/src/main/java/de/marlon/
+2026-09-24T13:00:40.7898049Z    creating: src/ivisor/app/src/main/java/de/marlon/ivisor/
+2026-09-24T13:00:40.7898487Z    creating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/
+2026-09-24T13:00:40.7899498Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/MainActivity.kt  
+2026-09-24T13:00:40.7900616Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/MoreScreen.kt  
+2026-09-24T13:00:40.7901671Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/ResultViews.kt  
+2026-09-24T13:00:40.7903177Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/CollectionScreen.kt  
+2026-09-24T13:00:40.7904074Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/ScanScreen.kt  
+2026-09-24T13:00:40.7904810Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/Theme.kt  
+2026-09-24T13:00:40.7906006Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/Components.kt  
+2026-09-24T13:00:40.7906998Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/RaidScreen.kt  
+2026-09-24T13:00:40.7908296Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/ui/CalcScreen.kt  
+2026-09-24T13:00:40.7908841Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/IVisorApp.kt  
+2026-09-24T13:00:40.7909243Z    creating: src/ivisor/app/src/main/java/de/marlon/ivisor/data/
+2026-09-24T13:00:40.7910565Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/data/Repo.kt  
+2026-09-24T13:00:40.7910949Z    creating: src/ivisor/app/src/main/java/de/marlon/ivisor/scan/
+2026-09-24T13:00:40.7911981Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/scan/ImageAnalysis.kt  
+2026-09-24T13:00:40.7912596Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/scan/Ocr.kt  
+2026-09-24T13:00:40.7913702Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/scan/OverlayUi.kt  
+2026-09-24T13:00:40.7915230Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/scan/OverlayService.kt  
+2026-09-24T13:00:40.7916108Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/scan/ScreenGrabber.kt  
+2026-09-24T13:00:40.7916522Z    creating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/
+2026-09-24T13:00:40.7917364Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/NameGen.kt  
+2026-09-24T13:00:40.7918305Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/Stats.kt  
+2026-09-24T13:00:40.7919640Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/GameData.kt  
+2026-09-24T13:00:40.7920571Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/Raid.kt  
+2026-09-24T13:00:40.7921393Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/MiniJson.kt  
+2026-09-24T13:00:40.7922286Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/Scan.kt  
+2026-09-24T13:00:40.7923342Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/Advisor.kt  
+2026-09-24T13:00:40.7923927Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/ArcMath.kt  
+2026-09-24T13:00:40.7924752Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/Pvp.kt  
+2026-09-24T13:00:40.7925399Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/Costs.kt  
+2026-09-24T13:00:40.7926585Z   inflating: src/ivisor/app/src/main/java/de/marlon/ivisor/core/ScanParser.kt  
+2026-09-24T13:00:40.7926955Z    creating: src/ivisor/app/src/main/assets/
+2026-09-24T13:00:40.7948239Z   inflating: src/ivisor/app/src/main/assets/gamedata.json  
+2026-09-24T13:00:40.7948549Z    creating: src/ivisor/app/src/main/res/
+2026-09-24T13:00:40.7948818Z    creating: src/ivisor/app/src/main/res/xml/
+2026-09-24T13:00:40.7949430Z   inflating: src/ivisor/app/src/main/res/xml/file_paths.xml  
+2026-09-24T13:00:40.7949802Z    creating: src/ivisor/app/src/main/res/mipmap-anydpi-v26/
+2026-09-24T13:00:40.7950410Z   inflating: src/ivisor/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml  
+2026-09-24T13:00:40.7950781Z    creating: src/ivisor/app/src/main/res/values/
+2026-09-24T13:00:40.7951243Z   inflating: src/ivisor/app/src/main/res/values/strings.xml  
+2026-09-24T13:00:40.7951776Z   inflating: src/ivisor/app/src/main/res/values/themes.xml  
+2026-09-24T13:00:40.7952255Z   inflating: src/ivisor/app/src/main/res/values/colors.xml  
+2026-09-24T13:00:40.7952577Z    creating: src/ivisor/app/src/main/res/drawable/
+2026-09-24T13:00:40.7953202Z   inflating: src/ivisor/app/src/main/res/drawable/ic_stat_scan.xml  
+2026-09-24T13:00:40.7953755Z   inflating: src/ivisor/app/src/main/res/drawable/ic_launcher_bg.xml  
+2026-09-24T13:00:40.7954339Z   inflating: src/ivisor/app/src/main/res/drawable/ic_launcher_fg.xml  
+2026-09-24T13:00:40.7954874Z   inflating: src/ivisor/app/src/main/AndroidManifest.xml  
+2026-09-24T13:00:40.7955250Z   inflating: src/ivisor/app/proguard-rules.pro  
+2026-09-24T13:00:40.7955972Z   inflating: src/ivisor/README.md    
+2026-09-24T13:00:40.7956373Z  extracting: src/ivisor/.gitignore   
+2026-09-24T13:00:40.7956799Z   inflating: src/ivisor/gradle.properties  
+2026-09-24T13:00:40.7957078Z    creating: src/ivisor/.kotlin/
+2026-09-24T13:00:40.7957425Z    creating: src/ivisor/.kotlin/sessions/
+2026-09-24T13:00:40.7957735Z    creating: src/ivisor/gradle/
+2026-09-24T13:00:40.7958078Z    creating: src/ivisor/gradle/wrapper/
+2026-09-24T13:00:40.7960841Z   inflating: src/ivisor/gradle/wrapper/gradle-wrapper.jar  
+2026-09-24T13:00:40.7961228Z   inflating: src/ivisor/gradle/wrapper/gradle-wrapper.properties  
+2026-09-24T13:00:40.7961703Z   inflating: src/ivisor/gradlew.bat  
+2026-09-24T13:00:40.7961993Z    creating: src/ivisor/tools/
+2026-09-24T13:00:40.7962793Z   inflating: src/ivisor/tools/build_data.py  
+2026-09-24T13:00:40.8033836Z ##[group]Run actions/setup-java@v4
+2026-09-24T13:00:40.8033991Z with:
+2026-09-24T13:00:40.8034106Z   distribution: temurin
+2026-09-24T13:00:40.8034231Z   java-version: 17
+2026-09-24T13:00:40.8034348Z   java-package: jdk
+2026-09-24T13:00:40.8034467Z   check-latest: false
+2026-09-24T13:00:40.8034585Z   server-id: github
+2026-09-24T13:00:40.8034707Z   server-username: GITHUB_ACTOR
+2026-09-24T13:00:40.8034853Z   server-password: GITHUB_TOKEN
+2026-09-24T13:00:40.8034993Z   overwrite-settings: true
+2026-09-24T13:00:40.8035125Z   job-status: success
+2026-09-24T13:00:40.8036841Z   token: ***
+2026-09-24T13:00:40.8036959Z ##[endgroup]
+2026-09-24T13:00:40.9103151Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-09-24T13:00:40.9107817Z ##[group]Installed distributions
+2026-09-24T13:00:40.9128869Z Resolved Java 17.0.20+1 from tool-cache
+2026-09-24T13:00:40.9129099Z Setting Java 17.0.20+1 as the default
+2026-09-24T13:00:40.9134926Z (node:2086) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-24T13:00:40.9135322Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-24T13:00:40.9137192Z Creating toolchains.xml for JDK version 17 from temurin
+2026-09-24T13:00:40.9180934Z Writing to /home/runner/.m2/toolchains.xml
+2026-09-24T13:00:40.9181408Z 
+2026-09-24T13:00:40.9181505Z Java configuration:
+2026-09-24T13:00:40.9181705Z   Distribution: temurin
+2026-09-24T13:00:40.9181890Z   Version: 17.0.20+1
+2026-09-24T13:00:40.9182206Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:40.9182362Z 
+2026-09-24T13:00:40.9182540Z ##[endgroup]
+2026-09-24T13:00:40.9193677Z Creating settings.xml with server-id: github
+2026-09-24T13:00:40.9246587Z Writing to /home/runner/.m2/settings.xml
+2026-09-24T13:00:40.9458808Z ##[group]Run gradle/actions/setup-gradle@v4
+2026-09-24T13:00:40.9459011Z with:
+2026-09-24T13:00:40.9459129Z   cache-disabled: true
+2026-09-24T13:00:40.9459257Z   cache-read-only: true
+2026-09-24T13:00:40.9459388Z   cache-write-only: false
+2026-09-24T13:00:40.9459530Z   cache-overwrite-existing: false
+2026-09-24T13:00:40.9459681Z   cache-cleanup: on-success
+2026-09-24T13:00:40.9459852Z   gradle-home-cache-includes: caches
+notifications
+
+2026-09-24T13:00:40.9460032Z   add-job-summary: always
+2026-09-24T13:00:40.9460181Z   add-job-summary-as-pr-comment: never
+2026-09-24T13:00:40.9460342Z   dependency-graph: disabled
+2026-09-24T13:00:40.9460517Z   dependency-graph-report-dir: dependency-graph-reports
+2026-09-24T13:00:40.9460739Z   dependency-graph-continue-on-failure: true
+2026-09-24T13:00:40.9460908Z   build-scan-publish: false
+2026-09-24T13:00:40.9461048Z   validate-wrappers: true
+2026-09-24T13:00:40.9461186Z   allow-snapshot-wrappers: false
+2026-09-24T13:00:40.9461381Z   gradle-home-cache-strict-match: false
+2026-09-24T13:00:40.9461539Z   workflow-job-context: null
+2026-09-24T13:00:40.9462998Z   github-token: ***
+2026-09-24T13:00:40.9463119Z env:
+2026-09-24T13:00:40.9463289Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:40.9463784Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:40.9464069Z ##[endgroup]
+2026-09-24T13:00:42.0525533Z Cache is disabled: will not restore state from previous builds.
+2026-09-24T13:00:42.0537770Z Merged default JDK locations into /home/runner/.m2/toolchains.xml
+2026-09-24T13:00:42.0588080Z ##[group]All Gradle Wrapper jars are valid
+2026-09-24T13:00:42.0589005Z ✓ Found known Gradle Wrapper JAR files:
+2026-09-24T13:00:42.0589488Z   7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172 src/ivisor/gradle/wrapper/gradle-wrapper.jar
+2026-09-24T13:00:42.0609020Z ##[endgroup]
+2026-09-24T13:00:42.0698321Z ##[group]Run cd src/ivisor && chmod +x gradlew && ./gradlew --no-daemon assembleRelease
+2026-09-24T13:00:42.0698667Z [36;1mcd src/ivisor && chmod +x gradlew && ./gradlew --no-daemon assembleRelease[0m
+2026-09-24T13:00:42.0750991Z shell: /usr/bin/bash -e {0}
+2026-09-24T13:00:42.0751134Z env:
+2026-09-24T13:00:42.0751312Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:42.0751582Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:00:42.0751812Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-09-24T13:00:42.0752000Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-09-24T13:00:42.0752175Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-09-24T13:00:42.0752355Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-09-24T13:00:42.0752723Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-09-24T13:00:42.0752994Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-09-24T13:00:42.0753210Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-09-24T13:00:42.0753360Z ##[endgroup]
+2026-09-24T13:00:42.4178540Z Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+2026-09-24T13:00:44.3418976Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2026-09-24T13:00:45.4157862Z 
+2026-09-24T13:00:45.4159037Z Welcome to Gradle 8.14.3!
+2026-09-24T13:00:45.4159421Z 
+2026-09-24T13:00:45.4159817Z Here are the highlights of this release:
+2026-09-24T13:00:45.4160322Z  - Java 24 support
+2026-09-24T13:00:45.4165382Z  - GraalVM Native Image toolchain selection
+2026-09-24T13:00:45.4168943Z  - Enhancements to test reporting
+2026-09-24T13:00:45.4169557Z  - Build Authoring improvements
+2026-09-24T13:00:45.4196516Z 
+2026-09-24T13:00:45.4207257Z For more details see https://docs.gradle.org/8.14.3/release-notes.html
+2026-09-24T13:00:45.4207711Z 
+2026-09-24T13:00:45.4208662Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2026-09-24T13:00:46.4148312Z Daemon will be stopped at the end of the build 
+2026-09-24T13:01:26.0134331Z > Task :app:preBuild UP-TO-DATE
+2026-09-24T13:01:26.0138073Z > Task :app:preReleaseBuild UP-TO-DATE
+2026-09-24T13:01:26.1120796Z > Task :app:mergeReleaseJniLibFolders
+2026-09-24T13:01:35.8145091Z > Task :app:buildKotlinToolingMetadata
+2026-09-24T13:01:36.3124400Z > Task :app:mergeReleaseNativeLibs
+2026-09-24T13:01:36.8157267Z > Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-09-24T13:01:36.9120964Z > Task :app:checkReleaseDuplicateClasses
+2026-09-24T13:01:36.9147006Z > Task :app:generateReleaseResValues
+2026-09-24T13:01:36.9176644Z > Task :app:checkReleaseAarMetadata
+2026-09-24T13:01:37.0126581Z 
+2026-09-24T13:01:37.0147127Z > Task :app:stripReleaseDebugSymbols
+2026-09-24T13:01:37.0147850Z Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libmlkit_google_ocr_pipeline.so.
+2026-09-24T13:01:37.0148342Z 
+2026-09-24T13:01:37.0148573Z > Task :app:mapReleaseSourceSetPaths
+2026-09-24T13:01:37.0148878Z > Task :app:generateReleaseResources
+2026-09-24T13:01:37.0149146Z > Task :app:extractReleaseNativeSymbolTables
+2026-09-24T13:01:38.3130723Z > Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+2026-09-24T13:01:38.3156725Z > Task :app:packageReleaseResources
+2026-09-24T13:01:38.6120408Z > Task :app:mergeReleaseResources
+2026-09-24T13:01:39.5129098Z > Task :app:createReleaseCompatibleScreenManifests
+2026-09-24T13:01:39.5144449Z > Task :app:extractDeepLinksRelease
+2026-09-24T13:01:39.6126965Z > Task :app:parseReleaseLocalResources
+2026-09-24T13:01:39.8128761Z > Task :app:processReleaseMainManifest
+2026-09-24T13:01:39.8129350Z > Task :app:processReleaseManifest
+2026-09-24T13:01:39.9120173Z > Task :app:javaPreCompileRelease
+2026-09-24T13:01:39.9140122Z > Task :app:processReleaseManifestForPackage
+2026-09-24T13:01:40.1123522Z > Task :app:mergeReleaseArtProfile
+2026-09-24T13:01:40.1130569Z > Task :app:extractProguardFiles
+2026-09-24T13:01:40.1131128Z > Task :app:mergeReleaseStartupProfile
+2026-09-24T13:01:40.1131596Z > Task :app:mergeReleaseShaders
+2026-09-24T13:01:40.1132061Z > Task :app:compileReleaseShaders NO-SOURCE
+2026-09-24T13:01:40.1132449Z > Task :app:generateReleaseAssets UP-TO-DATE
+2026-09-24T13:01:40.2137221Z > Task :app:mergeReleaseAssets
+2026-09-24T13:01:40.3157221Z > Task :app:extractReleaseVersionControlInfo
+2026-09-24T13:01:40.3176553Z > Task :app:compressReleaseAssets
+2026-09-24T13:01:40.4132402Z > Task :app:collectReleaseDependencies
+2026-09-24T13:01:40.5127469Z > Task :app:processReleaseResources
+2026-09-24T13:01:40.5156665Z > Task :app:sdkReleaseDependencyData
+2026-09-24T13:01:46.9122984Z > Task :app:validateSigningRelease
+2026-09-24T13:01:46.9156989Z > Task :app:writeReleaseAppMetadata
+2026-09-24T13:01:47.0122846Z > Task :app:writeReleaseSigningConfigVersions
+2026-09-24T13:01:47.0176872Z > Task :app:convertLinkedResourcesToProtoRelease
+2026-09-24T13:02:02.0121221Z 
+2026-09-24T13:02:02.0122048Z > Task :app:compileReleaseKotlin
+2026-09-24T13:02:02.0123171Z w: file:///home/runner/work/ivisor/ivisor/src/ivisor/app/src/main/java/de/marlon/ivisor/scan/OverlayService.kt:194:56 'static field SOFT_INPUT_ADJUST_RESIZE: Int' is deprecated. Deprecated in Java.
+2026-09-24T13:02:02.1120605Z 
+2026-09-24T13:02:02.1121475Z > Task :app:compileReleaseJavaWithJavac NO-SOURCE
+2026-09-24T13:02:02.4137097Z > Task :app:mergeReleaseGeneratedProguardFiles
+2026-09-24T13:02:02.4144026Z > Task :app:processReleaseJavaRes
+2026-09-24T13:02:03.0123991Z > Task :app:expandReleaseArtProfileWildcards
+2026-09-24T13:02:04.0120975Z > Task :app:mergeReleaseJavaResource
+2026-09-24T13:02:34.0150922Z > Task :app:minifyReleaseWithR8
+2026-09-24T13:03:03.2121398Z > Task :app:compileReleaseArtProfile
+2026-09-24T13:03:04.0119983Z > Task :app:shrinkReleaseRes
+2026-09-24T13:03:04.0146491Z > Task :app:convertShrunkResourcesToBinaryRelease
+2026-09-24T13:03:04.1134809Z > Task :app:optimizeReleaseResources
+2026-09-24T13:03:04.3131129Z > Task :app:packageRelease
+2026-09-24T13:03:04.3132514Z > Task :app:createReleaseApkListingFileRedirect
+2026-09-24T13:03:04.3142209Z > Task :app:assembleRelease
+2026-09-24T13:03:04.3149538Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/apk-1790254849142.json
+2026-09-24T13:03:04.3167449Z 
+2026-09-24T13:03:04.3173020Z [Incubating] Problems report is available at: file:///home/runner/work/ivisor/ivisor/src/ivisor/build/reports/problems/problems-report.html
+2026-09-24T13:03:04.3173509Z 
+2026-09-24T13:03:04.3184924Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-09-24T13:03:04.3186559Z 
+2026-09-24T13:03:04.3216600Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-09-24T13:03:04.3217229Z 
+2026-09-24T13:03:04.3221030Z For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-09-24T13:03:04.3244853Z 
+2026-09-24T13:03:04.3245238Z BUILD SUCCESSFUL in 2m 22s
+2026-09-24T13:03:04.3247507Z 45 actionable tasks: 45 executed
+2026-09-24T13:03:04.6965732Z ##[group]Run actions/upload-artifact@v4
+2026-09-24T13:03:04.6966056Z with:
+2026-09-24T13:03:04.6966182Z   name: IVisor-apk
+2026-09-24T13:03:04.6966331Z   path: src/ivisor/app/build/outputs/apk/release/*.apk
+2026-09-24T13:03:04.6966507Z   if-no-files-found: warn
+2026-09-24T13:03:04.6966633Z   compression-level: 6
+2026-09-24T13:03:04.6966750Z   overwrite: false
+2026-09-24T13:03:04.6966867Z   include-hidden-files: false
+2026-09-24T13:03:04.6967007Z env:
+2026-09-24T13:03:04.6967169Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:03:04.6967425Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:03:04.6967648Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-09-24T13:03:04.6967811Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-09-24T13:03:04.6967967Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-09-24T13:03:04.6968123Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-09-24T13:03:04.6968371Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-09-24T13:03:04.6968623Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-09-24T13:03:04.6968796Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-09-24T13:03:04.6968936Z ##[endgroup]
+2026-09-24T13:03:04.8153898Z (node:2409) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-24T13:03:04.8154632Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-24T13:03:04.8192907Z With the provided path, there will be 1 file uploaded
+2026-09-24T13:03:04.8217067Z Artifact name is valid!
+2026-09-24T13:03:04.8217357Z Root directory input is valid!
+2026-09-24T13:03:05.1496024Z Beginning upload of artifact content to blob storage
+2026-09-24T13:03:05.4845730Z (node:2409) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-09-24T13:03:06.2607013Z Uploaded bytes 7700925
+2026-09-24T13:03:06.3233640Z Finished uploading artifact content to blob storage!
+2026-09-24T13:03:06.3234214Z SHA256 digest of uploaded artifact zip is 93addf0ce098263bf40c52363daf25fffe97694f24baf3578c6605c6cb513bed
+2026-09-24T13:03:06.3236070Z Finalizing artifact upload
+2026-09-24T13:03:06.6044868Z Artifact IVisor-apk.zip successfully finalized. Artifact ID 10809275731
+2026-09-24T13:03:06.6045389Z Artifact IVisor-apk has been successfully uploaded! Final size is 7700925 bytes. Artifact ID is 10809275731
+2026-09-24T13:03:06.6050107Z Artifact download URL: https://github.com/Shalom42069/ivisor/actions/runs/36002749108/artifacts/10809275731
+2026-09-24T13:03:06.6190313Z ##[group]Run mkdir -p /tmp/deps/sdk/platforms /tmp/deps/sdk/build-tools && cd /tmp/deps
+2026-09-24T13:03:06.6190665Z [36;1mmkdir -p /tmp/deps/sdk/platforms /tmp/deps/sdk/build-tools && cd /tmp/deps[0m
+2026-09-24T13:03:06.6190902Z [36;1mcp -r ~/.gradle/caches/modules-2 m2[0m
+2026-09-24T13:03:06.6191065Z [36;1mfind m2 -name "*.lock" -delete[0m
+2026-09-24T13:03:06.6191254Z [36;1mcp -r $ANDROID_HOME/platforms/android-35 sdk/platforms/[0m
+2026-09-24T13:03:06.6191580Z [36;1mfor v in 34.0.0 35.0.0; do [ -d $ANDROID_HOME/build-tools/$v ] && cp -r $ANDROID_HOME/build-tools/$v sdk/build-tools/; done[0m
+2026-09-24T13:03:06.6191949Z [36;1mfind . -type f -size +90M | while read f; do split -b 80M "$f" "$f.part-"; rm "$f"; done[0m
+2026-09-24T13:03:06.6192188Z [36;1mdu -sh .[0m
+2026-09-24T13:03:06.6192323Z [36;1mgit init -q -b deps && git add -A[0m
+2026-09-24T13:03:06.6192536Z [36;1mgit -c user.name=bot -c user.email=bot@example.com commit -qm deps[0m
+2026-09-24T13:03:06.6194414Z [36;1mgit push -f ***github.com/Shalom42069/ivisor deps[0m
+2026-09-24T13:03:06.6246102Z shell: /usr/bin/bash -e {0}
+2026-09-24T13:03:06.6246245Z env:
+2026-09-24T13:03:06.6246417Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:03:06.6246682Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-09-24T13:03:06.6246909Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-09-24T13:03:06.6247077Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-09-24T13:03:06.6247234Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-09-24T13:03:06.6247414Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-09-24T13:03:06.6247648Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-09-24T13:03:06.6247915Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-09-24T13:03:06.6248087Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-09-24T13:03:06.6248234Z ##[endgroup]
+2026-09-24T13:03:23.1632881Z 738M	.
+2026-09-24T13:04:02.5450369Z remote: warning: See https://gh.io/lfs for more information.        
+2026-09-24T13:04:02.5451054Z remote: warning: File m2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.1.0/988bf980588bbbcfa1ba19c1ffd7aa869b335a31/kotlin-compiler-embeddable-2.1.0.jar is 56.08 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+2026-09-24T13:04:02.5451801Z remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+2026-09-24T13:04:02.7630480Z To https://github.com/Shalom42069/ivisor
+2026-09-24T13:04:02.7630852Z  + b3d1796...952f77e deps -> deps (forced update)
+2026-09-24T13:04:02.7767528Z Post job cleanup.
+2026-09-24T13:04:02.9258914Z In post-action step
+2026-09-24T13:04:02.9264658Z Cache is disabled: will not save state for later builds.
+2026-09-24T13:04:02.9267536Z Generating Job Summary
+2026-09-24T13:04:02.9279485Z Completed post-action step
+2026-09-24T13:04:02.9443611Z Post job cleanup.
+2026-09-24T13:04:03.0309695Z (node:2520) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-09-24T13:04:03.0407026Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-09-24T13:04:03.0471615Z Post job cleanup.
+2026-09-24T13:04:03.1106750Z [command]/usr/bin/git version
+2026-09-24T13:04:03.1126352Z git version 2.55.0
+2026-09-24T13:04:03.1153775Z Temporarily overriding HOME='/home/runner/work/_temp/dff945ad-e698-4a29-bb8a-d1696b504d69' before making global git config changes
+2026-09-24T13:04:03.1154654Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-24T13:04:03.1159511Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ivisor/ivisor
+2026-09-24T13:04:03.1200336Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-24T13:04:03.1238464Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-24T13:04:03.1532901Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-24T13:04:03.1586684Z http.https://github.com/.extraheader
+2026-09-24T13:04:03.1647142Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-24T13:04:03.1659332Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-24T13:04:03.1862143Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-24T13:04:03.1907933Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-24T13:04:03.2198329Z Cleaning up orphan processes
+2026-09-24T13:04:03.2395766Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, actions/upload-artifact@v4, gradle/actions/setup-gradle@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
