@@ -1,1 +1,19 @@
 
+name: APK bauen
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: unzip -o ivisor.zip -d src
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+      - run: cd src/ivisor && chmod +x gradlew && ./gradlew --no-daemon assembleRelease
+      - uses: actions/upload-artifact@v4
+        with:
+          name: IVisor-apk
+          path: src/ivisor/app/build/outputs/apk/release/*.apk
