@@ -1,0 +1,26 @@
+name: Log sichern
+on:
+  workflow_run:
+    workflows: ["APK bauen"]
+    types: [completed]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          RUN: ${{ github.event.workflow_run.id }}
+          RESULT: ${{ github.event.workflow_run.conclusion }}
+          REPO: ${{ github.repository }}
+        run: |
+          mkdir out && cd out
+          gh api repos/$REPO/actions/runs/$RUN/logs > ../logs.zip || true
+          unzip -q ../logs.zip || true
+          echo "$RUN $RESULT" > STATUS.txt
+          git init -q -b build-logs
+          git add -A
+          git -c user.name=bot -c user.email=bot@example.com commit -qm "Log $RUN $RESULT"
+          git push -f https://x-access-token:$GH_TOKEN@github.com/$REPO build-logs
