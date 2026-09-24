@@ -1,6 +1,7 @@
-
 name: APK bauen
 on: [push, workflow_dispatch]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,8 +13,30 @@ jobs:
           distribution: temurin
           java-version: 17
       - uses: gradle/actions/setup-gradle@v4
-      - run: cd src/ivisor && chmod +x gradlew && ./gradlew --no-daemon assembleRelease
+        with:
+          cache-disabled: true
+      - name: APK bauen
+        id: apk
+        continue-on-error: true
+        run: cd src/ivisor && chmod +x gradlew && ./gradlew --no-daemon assembleRelease
       - uses: actions/upload-artifact@v4
+        if: steps.apk.outcome == 'success'
         with:
           name: IVisor-apk
           path: src/ivisor/app/build/outputs/apk/release/*.apk
+      - name: Build-Umgebung sichern
+        if: always()
+        run: |
+          mkdir -p /tmp/deps/sdk/platforms /tmp/deps/sdk/build-tools && cd /tmp/deps
+          cp -r ~/.gradle/caches/modules-2 m2
+          find m2 -name "*.lock" -delete
+          cp -r $ANDROID_HOME/platforms/android-35 sdk/platforms/
+          for v in 34.0.0 35.0.0; do [ -d $ANDROID_HOME/build-tools/$v ] && cp -r $ANDROID_HOME/build-tools/$v sdk/build-tools/; done
+          find . -type f -size +90M | while read f; do split -b 80M "$f" "$f.part-"; rm "$f"; done
+          du -sh .
+          git init -q -b deps && git add -A
+          git -c user.name=bot -c user.email=bot@example.com commit -qm deps
+          git push -f https://x-access-token:${{ github.token }}@github.com/${{ github.repository }} deps
+      - name: Ergebnis
+        if: steps.apk.outcome != 'success'
+        run: exit 1
